@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApiVersioning.Controllers
 {
-    [ApiVersion("1.0")]
     [ApiController]
-    [Route("api/v{version:apiVersion}/products")] // URI Versioning
+    [Route("api/products")]
+    [ApiVersion("1.0")]
+    //[Route("api/v{version:apiVersion}/products")] // URI Versioning
+    //[Route("api/v2/products")] // URI Versioning
     public class ProductsV1Controller : ControllerBase
     {
         [HttpGet]
